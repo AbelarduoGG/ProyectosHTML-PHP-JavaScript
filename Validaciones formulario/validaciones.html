@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="validaciones.js"></script>
+    <link rel="stylesheet" href="validaciones.css">
+    <title>Validaciones</title>
+</head>
+<body>
+    <div id="forma">
+        <p>Registro Usuario</p>
+        <p style="font-size: 15px; text-align: justify; padding: 10px;">Le agradecemos por su interés en participar en nuestra conferencia. Complete nuestro formulario de 
+            registro a conferencia debajo para recibir su insignia de participante y número, más el programa de todo
+            el evento.</p>
+  <form action="" onsubmit="return validar(event);">
+    <ul>
+    <li>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre"placeholder="Nombre" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarLongitud(this, 4);" />
+    <input type="text" style="margin-left: 20px;" id="apellido" name="apellido" placeholder="Apellido" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarLongitud(this, 4);" />    
+    </li>
+    
+    <li>
+    <label for="compañia">Compañia / Organización</label>
+    <input type="text" style="width: 450px;" id="compañia" name="compañia" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarLongitud(this, 2);" />
+    </li>
+    <li>
+    <label for="telefono">Telefono</label>
+    <input type="text" style="width: 450px;" id="telefono" name="telefono" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this);revisarObligatorio(this); revisarLongitud(this, 10);" />
+    </li> 
+    <li>
+    <label for="email">E-mail</label>
+    <input type="text" style="width: 450px;" id="email" name="email" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarEmail(this);" />
+    </li>
+    <li>
+    <label for="domicilio">Domicilio</label>
+    <input type="text" style="width: 450px; margin-bottom: 20px;" id="direccion" name="direccion" placeholder="Dirección" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarLongitud(this, 8);" />
+    <input type="text" style="margin-left: 220px; width: 450px; margin-bottom: 20px;" id="calle" name="calle" placeholder="Calle transversal" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarLongitud(this, 8);" />
+    <input type="text" style="margin-left: 220px; margin-bottom: 20px;" id="ciudad" name="ciudad"placeholder="Ciudad" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarLongitud(this, 2);" />
+    <input type="text" style="margin-left: 20px; margin-bottom: 20px;" id="estado" name="estado" placeholder="Estado" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarLongitud(this, 4);" />    
+    <input type="text" style="margin-left: 220px; margin-bottom: 20px;" id="codigopostal" name="codigopostal" placeholder="Código Postal" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this);revisarObligatorio(this); revisarLongitud(this, 4);" />
+    <select id="pais" style="margin-left: 20px; height: 36px; margin-bottom: 20px; width: 220px;" name="pais" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this)">
+        <option value="">País</option>
+        <option value="Alemania">Alemania</option>
+        <option value="Bélgica">Bélgica</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Candá">Canadá</option>
+        <option value="Chile">Chile</option>
+        <option value="Corea">Corea</option>
+        <option value="España">España</option>
+        <option value="Estados Unidos">Estados Unidos</option>
+        <option value="Italia">Italia</option>
+        <option value="México">México</option>
+    </select>
+    </li>
+    <li>
+    <label style=" width: 500px;"><h1 style="font-size: 20px;">Participación a conferencias</h1></label>
+    <br>
+    </li>
+    <div style="float: left;">
+    <li>
+        <label for="conferencia"">Titulo de su conferencia</label>
+        <input type="text" style="width: 450px;" id="conferencia" name="conferencia" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarLongitud(this, 7);" />
+        </li>
+    <li>
+        <label for="participacion">Participación en</label>
+        <label for="cursosmañanas"><input type="checkbox" name="cursosmañanas" value="cursosmañanas" id="cursosmañanas"/>
+            Cursos en mañanas</label>
+        <label for="cursostardes"><input type="checkbox" name="cursostardes" value="cursostardes" id="cursostardes"/>
+            Cursos por las tardes</label>
+        <div style="margin-left: 220px;">
+        <label for="workshop"><input type="checkbox" name="workshop" value="workshop" id="workshop"/>
+            Workshop</label>
+        <label for="cena" ><input type="checkbox" name="cena" value="cena" id="cena"/>
+            Cena</label>
+        </div>
+    </li>
+    </div>
+</ul>
+    <button>Enviar</button>
+</form>
+  </div>
+</body>
+</html>

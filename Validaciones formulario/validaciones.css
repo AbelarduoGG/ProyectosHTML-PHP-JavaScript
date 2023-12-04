@@ -1,0 +1,66 @@
+#forma {
+    width: 750px;
+    box-shadow: 0 0 20px 1px rgba(0, 0,0, 0.3);
+    height: 1030px;
+    padding: 10px;
+    margin: auto;
+    font-family: Verdana;
+    color: #6497b1;
+    
+}
+input.error {
+	background-color:#FF9;
+	border: 1px solid red;
+}
+
+p {
+    font-size: 30px;
+    font-family: Verdana;
+    text-align: center;
+}
+
+.enfoco {
+    background-color: #6497b1;
+    border: 2px solid #011f4b;
+}
+
+label {
+    width: 200px;
+    display: block;
+    margin: 10px;
+    float: left;
+}
+
+input[type=text],
+select {
+    height: 30px;
+    width: 212px;
+    float: left;
+}
+
+input[type=number] {
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+button {
+    height: 30px;
+    width: 100%;
+    background-color: #005b96;
+    color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 30px;
+
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+}
+
+li {
+    margin: 0px;
+    padding: 0px;
+    height: 80px;
+}
