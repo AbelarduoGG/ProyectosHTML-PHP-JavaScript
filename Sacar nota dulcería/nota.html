@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  type="text/javascript" src="nota.js"></script>
+    <title>Formulario Ejemplo</title>
+</head>
+<body>
+    <h1>Dulceria la favorita</h1>
+    <fieldset>
+        <legend>Nota de Compra</legend>       
+    <form  method="get"  onsubmit="calcularNota(event)"> 
+        <br>
+        <label for="nombre">Nombre Cliente:</label>
+        <input type="text" id="nombre" name="nombre">
+        <br> <br>
+
+        <label for="producto">Producto</label>
+        <select name="producto" id="producto">       
+            <option value="0">Seleccione</option>
+            <option value="1">Caramelo</option>
+            <option value="2">Goma de mascar</option>
+            <option value="3">Bombones</option>
+        </select>
+        <br><br>
+
+        <label for="cantidad">Cantidad de articulos</label>
+        <input type="number" id="cantidad" name="cantidad">
+        <br><br>
+        
+        <label>Sabor</label> 
+        <br><br>
+        <input name="sabores" id="fresa" type="radio" value="Fresa" />
+        <label for="sabores">Fresa</label>
+        <input name="sabores" id="chocolate" type="radio" value="Chocolate"/>
+        <label for="Chocolate">Chocolate</label>
+        <input name="sabores" id="vainilla" type="radio" value="Vainilla"/>             
+        <label for="Vainilla">Vainilla</label>            
+        <br> <br>
+
+        <input name="impuesto" id="impuesto" type="checkbox"/> 
+        <label for="impuesto">Incluir Impuestos en la Nota de Venta </label>        
+        <br><br>
+        <button>Calcular Venta</button>
+    </fieldset>  
+    </form>
+</body>
+</html>
