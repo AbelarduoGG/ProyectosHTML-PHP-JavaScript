@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="es-ES">
+
+<head style= text-align:center>
+
+	<meta charset="utf-8">
+
+	<title>XPLOUDE</title>
+
+	<link rel=stylesheet type=text/css href="estilos.css">
+	<link rel="icon" type="image/png" href="Imagenes/x - ploude negra.png">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@1,7..72,300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<header class="divheader">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
+
+  <a href="Inicio.html" class="logo">
+  <img src="Imagenes/logo.png" alt="Logo de XPLOUDE">
+  </a>
+
+  <nav>
+    <ul class="menu-horizontal">
+
+      <li><a href="Inicio.html" class="nav-link">Inicio</a> </li>
+
+      <li>
+        <a href="#">Información</a>
+        <ul class="menu-vertical">
+          <li><a href="Pagina principal.html">Nosotros</a></li>
+          <li><a href="Noticias.html">Noticias</a></li>
+          <li><a href="Clientes.html">Clientes</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>Contacto</a>
+      <ul class="menu-vertical">
+        <li><a href="soycliente.html" >Soy cliente</a>   </li>
+        <li><a href="Únete a nuestro equipo.html">Únete a nuestro equipo</a></li>
+      </ul>
+        </li>
+    </ul>
+  </nav>
+
+</header>
+</head>
+
+<body>
+	<div class="unete">
+		<p>¡Únete a nuestro equipo!</p>
+	</div>
+
+<br><br>
+
+<div class="problematica">
+<p class="textos">¿Te encanta la programación y buscas comenzar profesionalmente?
+Llena el siguiente formulario con tus datos, te agendaremos una
+entrevista con gusto. Sin necesidad de experiencia previa.</p></div>
+<div class="problematica">
+<p class="textos">Te atenderemos lo más pronto posible</p></div>
+
+<div class="divformularioUnete">
+
+<h4>Formulario</h4>
+
+	<form action="procesar-datos.php" method="post" class="formulario">
+	
+	<input type="text" name="Campo_De_Nombre" class="controls" placeholder="Ingrese su nombre(s)."><form>
+
+	<input type="text" name="Campo_De_Apellidopaterno" class="controls" placeholder="Ingrese su apellido paterno."><form>
+
+	<input type="text" name="Campo_De_Apellidomaterno" class="controls" placeholder="Ingrese su apellido materno."><form>
+
+	<input type="number" name="Campo_De_Nacimiento" class="controls" placeholder="Ingrese su edad." min="18" max="60"><form>
+
+<br><br>
+    <span>Seleccione su identidad sexual.</span>
+    <br><br>
+	<span>Mujer</span><input type="radio" id="Mujer" name="sexo">   <span>Hombre</span><input type="radio" id=Hombre name="sexo">   <span>Otro(s)</span><input type="radio" id="Otros" name="sexo"><form>
+
+	<br><br><br>
+
+	<span>Estado civil.</span>  
+
+	<select name="lista_de_seleccion" class="controls">
+		<option value="Opcion_Soltero">Soltero</option>
+		<option value="Opcion_Casado">Casado</option>
+		<option value="Opcion_Viudo">Viudo</option>
+		<option value="Opcion_Otros">Otro(s)</option>
+		</select><form>
+
+	<input type="text" name="Campo_De_Correo" class="controls" placeholder="Ingrese su correo electrónico."><form>
+
+	<textarea name="Informacion" rows="5" cols="60" class="controls" placeholder="Escriba un poco de usted (sus pasatiempos, estudios, etc.)."></textarea><form>
+	
+	<textarea name="Razon_De_Empleo" rows="5" cols="2" class="controls" placeholder="¿Porqué quiere el empleo?"></textarea><form>
+	<br><br>
+
+	<pre><button type="reset" class="botonformulario">Borrar</button>       <button type="reset" class="botonformulario" onclick="window.alert('Información enviada');">Enviar</button></pre> 
+
+</form>
+</div>
+<img src="Imagenes/Avatar3.png" class="Avatar3">
+<img src="Imagenes/Avatar4.png" class="Avatar4">
+<img src="Imagenes/Avatar5.png" class="Avatar5">
+
+</body>
+
+<footer>
+  <a href="Inicio.html">
+  <img src="Imagenes/logo.png" alt="Logo de XPLOUDE"></a>
+<p>Copyright © 2023 Xploude - Todos los derechos reservados.</p>
+
+<div class="pie">
+<a href="soycliente.html"><p>Contacto</p></a>
+<p>|</p>
+<a href="Pagina principal.html"><p>Nosotros</p></a>
+<p>|</p>
+<a href="Noticias.html"><p>Noticias</p></a>
+
+<div class="piepequeño">
+<a href="https://www.instagram.com/xploude/" target="_blank"><img src="Imagenes/instagram.png"></a>
+<a href="https://www.instagram.com/xploude/" target="_blank"><img src="Imagenes/facebook.png"></a>
+<a href="https://www.instagram.com/xploude/" target="_blank"><img src="Imagenes/youtube.png"></a>
+</div>
+
+</div>
+
+</footer>
+
+</html>
