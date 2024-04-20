@@ -1,0 +1,155 @@
+/* Estilos para la clase encabezado */
+.encabezado {
+    background-color: #FF7900; /* Cambiar a naranja */
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 8vh; /* Usa el 8% del alto de la pantalla */
+    align-items: center;
+  }
+  
+  /* Estilos para la clase menu */
+  .menu {
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex: 1;
+    padding: 5px; /* Reduce el espacio alrededor del contenido */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilos para los enlaces dentro de la clase menu */
+  .menu a {
+    color: white; /* Cambiar el color del texto a blanco */
+    margin-left: 3%;
+    text-decoration: none;
+    font-size: 0.9em; /* Reduce el tamaño del texto */
+  }
+  
+  /* Estilos para el botón del menú */
+  .botonmenu {
+    background-color: #FF7900; /* Cambiar el color de fondo a naranja */
+    width: 13%;
+    text-align: center;
+    margin-right: 5%; /* Reduce el margen derecho */
+  }
+  
+  /* Estilos para el botón del menú cuando se pasa el cursor sobre él */
+  .botonmenu:hover {
+    background-color: rgb(240, 102, 33); /* Cambiar el color de fondo al pasar el mouse */
+    text-decoration: none;
+  }
+  
+  /* Estilos para el elemento de sesión del menú */
+  .menusesion {
+    /* background-color: aqua; */
+    width: 13%;
+    padding: 5px; /* Reduce el espacio alrededor del contenido */
+    margin-right: 2%; /* Reduce el margen derecho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Estilos para los enlaces dentro de la clase menusesion */
+  .menusesion a {
+    color: white; /* Cambiar el color del texto a blanco */
+    margin-left: 2%;
+    text-decoration: none;
+    font-size: 0.9em; /* Reduce el tamaño del texto */
+  }
+  
+  /* Estilos para el icono del menú */
+  .menuicono {
+    /* background-color: rgb(255, 119, 0); */
+    width: 13%;
+    padding: 5px; /* Reduce el espacio alrededor del contenido */
+    margin-left: 1%; /* Reduce el margen izquierdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Estilos para la imagen dentro de la clase menuicono */
+  .menuicono img {
+    width: 100px; /* Reduce el tamaño de la imagen */
+    height: 100px; /* Reduce el tamaño de la imagen */
+  }
+  
+  /* Estilos para el botón */
+button {
+    cursor: pointer;
+    padding: 10px 10px; /* Ajusta el padding del botón */
+    border: unset;
+    border-radius: 8px; /* Reduce el radio de borde */
+    color: #FCEEE3; /* Cambiar el color del texto a naranja */
+    z-index: 1;
+    background: #d14620; /* Cambiar el color de fondo a naranja */
+    position: relative;
+    font-weight: 600;
+    font-size: 0.8em; /* Reducir el tamaño del texto */
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+  }
+  
+  /* Estilos para el pseudo-elemento ::before del botón */
+  button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 10px; /* Reduce el radio de borde */
+    background-color: #c72718; /* Cambiar el color de la sombra a naranja */
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    transition: all 250ms;
+  }
+  
+  /* Estilos para el botón cuando se pasa el cursor sobre él */
+  button:hover::before {
+    width: 100%;
+  }
+
+  /* Estilos para los títulos de los botones */
+p {
+    padding: 0;
+    display: block;
+    margin: 0; /* Elimina el margen del párrafo */
+    font-size: 0.8em; /* Tamaño del texto para títulos de botones en dispositivos móviles */
+  }
+
+  a {
+    padding: 0;
+    display: block;
+    margin: 0; /* Elimina el margen del párrafo */
+    font-size: 0.8em; /* Tamaño del texto para títulos de botones en dispositivos móviles */
+  }
+  
+  /* Estilos para el botón de cerrar sesión en dispositivos móviles */
+
+  @media only screen and (max-width: 600px) {
+    a {
+      font-size: 0.7em; /* Reducir el tamaño del texto para dispositivos móviles */
+    }
+
+    p {
+      font-size: 0.7em; /* Reducir el tamaño del texto para dispositivos móviles */
+    }
+
+    button {
+      padding: 20px, 20px; /* Ajusta el padding del botón para dispositivos móviles */
+      font-size: 0.6em; /* Reducir el tamaño del texto para dispositivos móviles */
+    }
+
+    .menuicono img {
+      margin-left: 15px;
+      width: 90px; /* Reduce el tamaño de la imagen */
+      height: 90px; /* Reduce el tamaño de la imagen */
+    }
+  }

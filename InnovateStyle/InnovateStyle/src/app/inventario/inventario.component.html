@@ -1,0 +1,127 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<div class="inventario">
+
+    <div class="formulario">
+        <div class="login wrap">
+            <div class="h1">Nuevo producto</div>
+            <input placeholder="ID proveedor" type="text" [(ngModel)]="inventario.proveedor_id">
+            <input placeholder="Nombre" type="text" [(ngModel)]="inventario.nombre">
+            <textarea maxlength="30" placeholder="Descripción" [(ngModel)]="inventario.descripcion"></textarea>
+
+            <div class="botones">
+                <div class="botones">
+                    <input placeholder="Precio" type="number" step=".01" [(ngModel)]="inventario.precio">
+                </div>
+                <div class="botones">
+                    <input placeholder="Cantidad" type="number" [(ngModel)]="inventario.cantidad">
+                </div>
+            </div>
+
+            <div class="botones">
+                <div class="botones">
+                    <select title="categoria" [(ngModel)]="inventario.categoria">
+                        <option value="" disabled selected>Categoria</option>
+                        <option value="Camiseta">Camiseta</option>
+                        <option value="Pantalón">Pantalón</option>
+                        <option value="Chaqueta">Chaqueta</option>
+                        <option value="Vestido">Vestido</option>
+                        <option value="Calzado">Calzado</option>
+                        <option value="Accesorio">Accesorio</option>
+                    </select>       
+                </div>
+                <div class="botones">
+                    <input placeholder="Marca" type="text" [(ngModel)]="inventario.marca">
+                </div>
+            </div>   
+            
+            <input placeholder="Imagen 1" type="file" accept="image/*" [(ngModel)]="inventario.imagen1" (change)="rutaImagen1($event)" id="imagen1">
+        
+            <input value="Registrar" class="btn" type="submit" (click)="agregar(); limpiarCampos()">
+          </div>
+    </div>
+
+    <div class="formulario">
+        <div class="login wrap">
+            <div class="h1">Control de productos</div>
+            <input placeholder="Nombre del producto" type="text" [(ngModel)]="inventario.nombre">
+
+            <div class="botones">
+                <div class="botones">
+                    <input value="Consultar" class="btn" type="submit" (click)="consultar(); limpiarCampos()">
+                </div>
+                <div class="botones">
+                    <input value="Eliminar" class="btneliminar" type="submit" (click)="eliminar(); limpiarCampos()">
+                </div>
+            </div> 
+          </div>
+    </div>
+
+    <div class="formulario">
+        <div class="login wrap">
+            <div class="h1">Modificar productos</div>
+            <input placeholder="Nombre del producto" type="text" [(ngModel)]="inventario.nombre">
+            <div class="botones">
+                <div class="botones">
+                    <input placeholder="Cantidad" type="number" [(ngModel)]="inventario.cantidad">
+                </div>
+                <div class="botones">
+                    <input placeholder="Precio" type="number" step=".01" [(ngModel)]="inventario.precio">
+                </div>
+            </div>
+            <div class="botones">
+                <div class="botones">
+                    <input value="Modificar" class="btn" type="submit" (click)="modificar(); limpiarCampos()">
+                </div>
+            </div> 
+          </div>
+    </div>
+
+    <div class="buscador">
+        <input class="input-busqueda" placeholder="Buscar producto..." type="text" [(ngModel)]="terminoBusqueda" (input)="buscarProductos()">
+        <button class="btn-buscar" (click)="buscarProductos()">Buscar</button>
+    </div>
+
+    <div class="contenedortabla">
+    <table class="miTabla">
+        <thead>
+            <tr>
+                <!-- <th>ID</th> -->
+                <th>Nombre</th>
+                <!-- <th>Descripcion</th> -->
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Imagen</th>
+                <!-- <th>Imagen 2</th>
+                <th>Imagen 3</th> -->
+                <!-- <th>Categoria</th> -->
+                <!-- <th>Estado</th> -->
+                <!-- <th>Marca</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            
+            <ng-container *ngFor="let producto of productosFiltrados">
+                <tr *ngIf="producto.estado === 'Activo'">                  
+                    <!-- <td>{{ producto._id }}</td> -->
+                    <td>{{ producto.nombre }}</td>
+                    <!-- <td>{{ producto.descripcion }}</td> -->
+                    <td>{{ producto.precio }}</td>
+                    <td>{{ producto.cantidad }}</td>
+                    <td><img src="{{ producto.imagen1 }}"></td>
+                    <!-- <td><img src="{{ producto.imagen2 }}"></td>
+                    <td><img src="{{ producto.imagen3 }}"></td> -->
+                    <!-- <td>{{ producto.categoria }}</td> -->
+                    <!-- <td>{{ producto.estado }}</td> -->
+                    <!-- <td>{{ producto.marca }}</td> -->
+                </tr>
+            </ng-container>
+
+        </tbody>
+    </table>
+    </div>
+
+</div>
+
