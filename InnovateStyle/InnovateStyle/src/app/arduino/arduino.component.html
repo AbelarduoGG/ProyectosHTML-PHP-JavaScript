@@ -1,0 +1,78 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<div class="arduino">
+
+    <div class="arduino">
+        <div class="controladores">
+          <div class="login wrap">
+            <div class="h1">Controlar dispositivo</div>
+
+            <div class="botones">
+                <div class="botones">
+                    <button  class="btn" (click)="encenderSensor()">Encender</button>
+                </div>
+                <div class="botones">
+                    <button class="btneliminar" (click)="apagarSensor()">Apagar</button>
+                </div>
+            </div> 
+
+          </div>
+        </div>
+
+<div class="separarcuadros">
+    <div class="separarcuadros">
+<div class="tabla">
+    <table class="miTabla">
+        <thead>
+            <tr>
+                <th colspan="2" style="background-color: rgb(57, 99, 14); text-align:center;">Sensor 1</th>
+            </tr>
+
+            <tr>
+                <th>N.Sensor</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let arduino of arduinos">
+            <tr>
+                <td>{{ arduino.nSensor }}</td>
+                <td>{{ arduino.valor }}</td>
+            </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
+</div>
+
+<div class="separarcuadros">
+<div class="tabla">
+    <table class="miTabla">
+        <thead>
+            <tr>
+                <th colspan="2" style="background-color: rgb(57, 99, 14); text-align:center;">Sensor 2</th>
+            </tr>
+            <tr>
+                <th>N.Sensor</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let sensor2 of sensor2s">
+            <tr>
+                <td>{{ sensor2.nSensor}}</td>
+                <td>{{ sensor2.estado}}</td>
+            </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
+</div>
+
+</div>
+
+
+
+</div>

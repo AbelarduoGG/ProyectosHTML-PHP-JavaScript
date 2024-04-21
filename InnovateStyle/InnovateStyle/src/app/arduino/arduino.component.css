@@ -1,0 +1,181 @@
+/* Estilos para la clase arduino */
+.arduino {
+  margin-top: 10vh; /* Usa 10% del alto de la pantalla como margen superior */
+  margin-bottom:10vh;
+}
+
+/* Estilos para la clase controladores */
+.controladores {
+  margin-bottom: 5%; /* Usa un margen inferior del 5% del tamaño de su contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para la clase tabla */
+.tabla {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para la tabla */
+.miTabla {
+  margin-bottom: 5%; /* Margen inferior del 5% del tamaño de su contenedor */
+  width: 90%; /* Usa el 90% del ancho de su contenedor */
+  border-collapse: collapse; /* Combina los bordes de las celdas */
+}
+
+.miTabla th,
+.miTabla td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #dddddd; /* Agrega bordes a las celdas */
+}
+
+.miTabla th {
+  background: #6c6403; /* Cambiar el color de fondo a beige */
+  color: white; /* Texto blanco */
+  padding: 8px; /* Espaciado interno */
+}
+
+.miTabla tbody tr:nth-child(even) td {
+  background-color: #f9f9f9; /* Color de fondo claro para las filas pares */
+}
+
+.miTabla tbody tr:nth-child(odd) td {
+  background-color: #eaeaea; /* Color de fondo oscuro para las filas impares */
+}
+
+/* Estilos para el formulario de controladores */
+.login {
+  margin-bottom: 5%; /* Margen inferior del 5% del tamaño de su contenedor */
+  width: 90%; /* Usa el 90% del ancho de su contenedor */
+  height: auto;
+  background: #0c663c;
+  padding: 20px; /* Reduce el espacio interno */
+  color: #fff;
+  border-radius: 17px;
+  font-size: 1.1em; /* Reduce el tamaño del texto */
+  box-shadow: inset 2px 2px 10px rgb(24, 23, 23),
+    inset -1px -1px 5px rgba(44, 41, 41, 0.6);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Estilos para el input tipo número dentro del formulario de controladores */
+.login input[type="number"] {
+  opacity: 1;
+  display: block;
+  border: none;
+  outline: none;
+  width: 80%; /* Usa el 80% del ancho del contenedor */
+  padding: 10px; /* Aumenta el espacio interno */
+  font-size: 0.9em; /* Reduce el tamaño del texto */
+  background-color: #47a955; /* Cambiar el color de fondo a amarillo */
+  color: #ffffff;
+  border: 1px solid #323030;
+  box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(43, 44, 42, 0.6);
+}
+
+/* Estilos para el contenedor de radio-buttons dentro del formulario de controladores */
+.radio-container {
+  display: flex;
+  flex-wrap: wrap; /* Envuelve los elementos si no caben en una sola fila */
+  margin: 2%; /* Margen del 2% del tamaño de su contenedor */
+}
+
+/* Estilos para los inputs dentro del formulario de controladores cuando tienen el foco */
+.login input:focus {
+  animation: bounce 1s;
+  -webkit-appearance: none;
+}
+
+/* Estilos para el placeholder de los inputs dentro del formulario de controladores */
+.login input::placeholder {
+  color: #ffffff; /* Cambiar el color del placeholder a blanco */
+}
+
+/* Estilos para los botones y encabezados dentro del formulario de controladores */
+.login input[type=submit],
+.login input[type=button],
+.h1 {
+  font-family: "Montserrat", sans-serif;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 13px;
+  margin: 20px 0 0 0; /* Reducción del margen superior */
+  border-radius: 500px;
+  font-weight: 600;
+  animation: bounce2 1.6s;
+}
+
+/* Estilos para el encabezado h1 dentro del formulario de controladores */
+.h1 {
+  padding: 0;
+  display: flex;
+  margin-bottom: 5%; /* Margen inferior del 5% del tamaño de su contenedor */
+  font-size: 1.1em; /* Reduce el tamaño del texto */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.botones{
+  display: flex;
+  flex: 1;
+  margin: 8px;    /* Espacio entre los divs, desde fuera */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para el botón dentro del formulario de controladores */
+.btn {
+  background-color: #FFAD03; /* Cambiar el color de fondo a naranja claro por defecto */
+  border: 2px solid #FFAD03; /* Borde naranja claro */
+  border-radius: 20px; /* Hacer que los botones sean redondos */
+  box-shadow: 6px 6px 10px rgba(0,0,0,1), 1px 1px 10px rgba(22, 21, 21, 0.6);
+  color: #ffffff;
+  padding: 16px !important;
+}
+
+
+/* Estilos para el botón al pasar el cursor sobre él dentro del formulario de controladores */
+.btn:hover {
+  background: linear-gradient(144deg, #ffa200, #ffcf0f 50%, #ffbe4e); /* Degradado con tonalidades naranjas */
+  border: 2px solid #FF7900; /* Borde en un tono más oscuro */
+}
+
+.btneliminar {
+  background-color: #ff0303; /* Cambiar el color de fondo a naranja claro por defecto */
+  border: 2px solid #ff1c03; /* Borde naranja claro */
+  border-radius: 20px; /* Hacer que los botones sean redondos */
+  box-shadow: 6px 6px 10px rgba(0,0,0,1), 1px 1px 10px rgba(22, 21, 21, 0.6);
+  color: #ffffff;
+  padding: 16px !important;
+}
+
+.btneliminar:hover {
+  background: linear-gradient(144deg, #ff3300, #ff2f0f 50%, #ff604e); /* Degradado con tonalidades naranjas */
+  border: 2px solid #ff6f00; /* Borde en un tono más oscuro */
+}
+
+/* Estilos para el contenedor de los cuadros */
+.separarcuadros {
+  display: flex;
+  flex-wrap: wrap; /* Envuelve los elementos si no caben en una sola fila */
+  justify-content: center;
+  align-items: center;
+  margin: 20px; /* Espacio entre los divs, desde fuera */
+}
+
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .controladores {
+    flex-direction: column; /* Cambia la dirección del flexbox a columnas */
+  }
+  .tabla {
+    flex-direction: column; /* Cambia la dirección del flexbox a columnas */
+  }
+}
