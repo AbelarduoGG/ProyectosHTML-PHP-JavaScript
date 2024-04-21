@@ -1,0 +1,14 @@
+<p>menu works!</p>
+
+<ul>
+    <li><a href="" routerLink="inicio">Inicio</a></li>      <!--declaramos el link con la palabra reservada RouterLink, nos aseguramos que coincida el nombre con el path en nuestro app.routes.ts  -->
+    <li><a href="" routerLink="contacto">Contacto</a></li>
+    @if(serviciologin.eslogueado()){     <!-- retorna true o false si existe o no la variable token -->
+        <li><a href="" routerLink="directivas">Directivas</a></li>
+    }
+    @if(serviciologin.eslogueado()){    <!-- segunda forma de utilizar un if -->
+        <li><a href="" (click)="serviciologin.cerrarsesion()">Cerrar sesion</a></li>   <!--cerrar sesion no es un componente es una accion -->
+    }@else{
+        <li><a href="" routerLink="iniciosesion">Inicio ses ion</a></li>
+    }
+</ul>

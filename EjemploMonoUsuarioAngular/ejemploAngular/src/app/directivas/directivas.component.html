@@ -1,0 +1,105 @@
+<div style="padding-left: 20%;">
+    <p>directivas works!</p>
+
+    <h1>Directivas de control</h1>
+
+    <h2>Directivas *** IF ***</h2>
+
+    <input *ngIf="edad >= 18 || valor" type="button" value="Aceptar">  <!--ponemos nuestra condicion a evaluar con el ngIf. si no se cumple no se muestra el componente -->
+
+    <div *ngIf="valor">
+        Nombre: <input type="text" name="" id=""><br>
+        Fecha de nacimiento: <input type="date" name="" id=""><br>
+        Email: <input type="email" name="" id=""><br>
+    </div>
+
+    <h2>Directivas *** IF - ELSE ***</h2>
+
+    {{ puesto }} <br> <!--haremos uso de la interpolacion para ver el contenido de la variable -->
+
+    Elige tu puesto:
+    <select name="" id="" [(ngModel)]="puesto">  <!--usaremos la libreria de formulario para enlazar la variable (puesto) con elemento visual -->
+        <option value="">Seleccione uno</option>
+        <option value="Gerente">Gerente</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Cajero">Cajero</option>
+    </select>
+
+    <div *ngIf="puesto == 'Gerente'; else esfalso">  <!--creamos un identificador para un else -->
+        <span>Bienvenido Sr. Gerente</span>
+    </div>
+    <ng-template #esfalso>  <!--etiqueta enlazado con el identificador -->
+        <br><span>No tienes los permisos para ingresar</span>
+    </ng-template> 
+
+    <br><br>
+
+    <h2>Directivas *** SWITCH - CASE ***</h2>
+
+    {{ grado }}
+    <br>
+
+    Ultimo grado obtenido o en curso: 
+    <input type="text" name="" id="" [(ngModel)]="grado">
+
+    <select name="" id="" [(ngModel)]="grado">
+        <option value="">Seleccione uno</option>
+        <option value="1">Primero</option>
+        <option value="2">Segundo</option>
+        <option value="3">Tercero</option>
+        <option value="4">Cuarto</option>
+        <option value="5">Quinto</option>
+        <option value="6">Sexto</option>
+    </select>
+
+
+    <div [ngSwitch]="grado">
+        <span *ngSwitchCase="'1'">Estas en panales</span>  <!--entre doble comillas para tomarlo como cadena -->
+        <span *ngSwitchCase="'2'">Empiezas a gatear</span>
+        <span *ngSwitchCase="'3'">Ya caminas</span>
+        <span *ngSwitchCase="'4'">Ya corres</span>
+        <span *ngSwitchCase="'5'">Ya saltas</span>
+        <span *ngSwitchCase="'6'">Eres un master</span>
+        <span *ngSwitchDefault>Error en opcion</span>
+    </div>
+    <br><br>
+
+    <h2>Directivas *** FOR ***</h2>
+    <span *ngFor="let d of datos">     <!--usamos la letra d como variable en un arreglo llamado datos -->
+        <ul>
+            <li>{{ d }}</li>        <!--recorre todos los indices y los imprime -->
+        </ul>
+    </span>
+
+    <table border="2">
+        <tr>
+            <th>CODIGO</th>
+            <th>NOMBRE</th>
+            <th>DESCRIPCION</th>
+            <th>PRECIO</th>
+            <th>EXISTENCIA</th>
+        </tr>
+        <tr *ngFor="let p of productos">
+            <td align="center">{{ p.codigo }}</td>
+            <td align="left">{{ p.nombre }}</td>
+            <td align="left">{{ p.descripcion }}</td>
+            <td align="center">$ {{ p.precio }}</td>
+            <td align="center">{{ p.existencia }}</td>
+        </tr>
+    </table>
+
+    <h2>Uso del clic en angularCLI</h2>
+    Operaciones basicas matematicas
+    <br>
+    Numero 1: <input type="number" name="" id="" [(ngModel)]="can1"><br>    <!--le declaramos las variables a nuestros campos -->
+    Numero 2: <input type="number" name="" id="" [(ngModel)]="can2"><br>
+    <br>
+    <input type="button" value="Sumar" (click)="suma()">    <!--llamamos nuestros metodos con cada boton -->
+    <input type="button" value="Restar" (click)="resta()">
+    <input type="button" value="Multiplicar" (click)="multiplica()">
+    <input type="button" value="Dividir" (click)="divide()">
+    <br><br>
+    Total: <input type="text" [(ngModel)]="total" readonly>        <!--declaramos la variable de total -->
+
+
+</div>
