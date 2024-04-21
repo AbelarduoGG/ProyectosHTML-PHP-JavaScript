@@ -1,0 +1,31 @@
+<div class="iniciosesion">
+
+<div class="foto">
+    <img src="../../assets/imagenes/iniciosesion.jpg">
+</div>
+
+<div class="input-container">
+<div class="ingreso">
+    <table>
+        <tr>
+            <td><div class="input-group">
+                <input required="" type="text" name="correo" autocomplete="off" class="input" [(ngModel)]="usuario.correo">
+                <label class="user-label">Correo</label>
+          </div></td>
+        </tr>
+        <tr>
+            <td><div class="input-group">
+                <input required="" type="password" name="contrasena" autocomplete="off" class="input" [(ngModel)]="usuario.contrasena">
+                <label class="user-label">Contraseña</label>
+              </div></td>
+        </tr>
+        <tr>
+           <td colspan="2" align="right">
+            <button (click)="login()"><span> Enviar </span></button>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+
+</div>
